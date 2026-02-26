@@ -6,6 +6,15 @@ const EventController = () => import('#controllers/events_controller')
 const UsersController = () => import('#controllers/users_controller')
 const ReservationController = () => import('#controllers/reservations_controller')
 
+
+router.get('/health', async () => {
+  return {
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+  }
+})
+
+
 router
   .resource('/api/events', EventController)
   .apiOnly()
@@ -39,3 +48,4 @@ router.get('/docs', async () => {
 router.get('/swagger', async () => {
   return AutoSwagger.default.docs(router.toJSON(), swagger)
 })
+
