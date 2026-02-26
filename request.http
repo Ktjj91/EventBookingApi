@@ -1,0 +1,91 @@
+#### GET EVT
+GET http://localhost:3333/api/events
+Authorization: Bearer oat_OQ.X2RfbFhGWnFRLVJqMzBtTEY5T1JTWkFNTGZlOUpDanpxQzdpUEkyUjIyNTU0MDc5MTQ
+
+#### POST auth
+POST http://localhost:3333/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "admin@admin.com",
+  "password": "adminadmin"
+}
+
+
+#### POST auth
+POST http://localhost:3333/api/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "thomas@gmail.com",
+  "password": "testtesttest"
+}
+
+###
+DELETE http://localhost:3333/api/auth/logout
+Authorization: Bearer oat_OQ.X2RfbFhGWnFRLVJqMzBtTEY5T1JTWkFNTGZlOUpDanpxQzdpUEkyUjIyNTU0MDc5MTQ
+
+
+#### GET EVT
+GET http://localhost:3333/api/events
+
+
+#### GET EVT
+GET http://localhost:3333/api/events/5
+
+#### POST EVT
+POST  http://localhost:3333/api/events/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer oat_NQ.UDVGWEZ0dk5zWllaNmZUeDZ4QkFTT3ItSmdJRHNBYW5DbkdwWEdzZzIzNDQ2NzM3OQ
+
+{
+  "title": "je suis un test",
+  "description" : "je suis un test 3",
+  "date": "2026-06-15T18:30:00.000Z",
+  "capacity": 1000
+}
+
+
+
+###
+GET http://localhost:3333/api/me
+Content-Type: application/json
+Authorization: Bearer oat_Ng.OTRMckt0aTliNlg1c1IyVmlwdzB0UkQtY2lhUm1LVzJzZEtZdm5XRjMyMzU5ODAzMzg
+
+
+
+
+
+###
+POST http://localhost:3333/api/reserve/2
+Content-Type: application/json
+Authorization: Bearer oat_Ng.OTRMckt0aTliNlg1c1IyVmlwdzB0UkQtY2lhUm1LVzJzZEtZdm5XRjMyMzU5ODAzMzg
+
+{
+  "quantity": 1
+}
+
+
+
+###
+PATCH http://localhost:3333/api/reserve/cancel/35
+Content-Type: application/json
+Authorization: Bearer oat_Ng.OTRMckt0aTliNlg1c1IyVmlwdzB0UkQtY2lhUm1LVzJzZEtZdm5XRjMyMzU5ODAzMzg
+
+{
+  "quantity": 1
+}
+
+###
+GET http://localhost:3333/api/reserves
+Content-Type: application/json
+Authorization: Bearer oat_Nw.YW9OdWpTY1Nmdm5GNUplQjVsZ1VGOGNGTmtHNWJKendFNUNUdUpEYjMzMTY1ODI5NjQ
+
+
+
+
+
+

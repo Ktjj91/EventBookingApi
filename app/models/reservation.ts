@@ -26,9 +26,9 @@ export default class Reservation extends BaseModel {
   @belongsTo(() => Event, { foreignKey: 'eventId' })
   declare event: relations.BelongsTo<typeof Event>
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime({ autoCreate: true, serializeAs: null })
   declare createdAt: DateTime
 
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  @column.dateTime({ autoCreate: true, autoUpdate: true, serializeAs: null })
   declare updatedAt: DateTime
 }
